@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class NewPasswordPage extends StatelessWidget {
-  const NewPasswordPage({Key? key}) : super(key: key);
+class CoursePage extends StatelessWidget {
+  const CoursePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +10,7 @@ class NewPasswordPage extends StatelessWidget {
     return Scaffold(
       key: scaffoldKey,
       body: const SizedBox.expand(
-        child: Center(child: Text('NewPasswordPage')),
+        child: Center(child: Text('CoursePage')),
       ),
     );
   }

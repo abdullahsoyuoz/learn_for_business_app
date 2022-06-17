@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learn_for_business_app/Controller/mainpage_indexer.dart';
-import 'package:learn_for_business_app/View/Page/Getting%20Started/auth_page.dart';
-import 'package:learn_for_business_app/View/Page/Getting%20Started/splash_page.dart';
+import 'package:learn_for_business_app/View/Page/Auth/auth_page.dart';
 import 'package:learn_for_business_app/View/Style/theme_data.dart';
 import 'package:provider/provider.dart';
 

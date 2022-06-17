@@ -1,22 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:learn_for_business_app/View/Style/color.dart';
 
 ThemeData appTheme() => ThemeData.light().copyWith(
+    scaffoldBackgroundColor: Colors.white,
+    textTheme: TextTheme(
+      bodyText2: GoogleFonts.montserrat(color: Colors.black)
+    ),
     inputDecorationTheme: InputDecorationTheme(
       hintStyle: TextStyle(color: AppColor.grey),
       floatingLabelStyle: TextStyle(color: AppColor.grey),
       focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(10),
         borderSide: BorderSide(color: AppColor.greyLight, width: 2),
         gapPadding: 5,
       ),
       enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(10),
         borderSide: BorderSide(color: AppColor.greyLight, width: 2),
         gapPadding: 5,
       ),
       border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(10),
         borderSide: BorderSide(color: AppColor.greyLight, width: 2),
         gapPadding: 5,
       ),
@@ -36,6 +41,5 @@ ThemeData appTheme() => ThemeData.light().copyWith(
     ),
     textButtonTheme: TextButtonThemeData(
         style: ButtonStyle(
-      foregroundColor: MaterialStateProperty.all(AppColor.grey),
-      overlayColor: MaterialStateProperty.all(AppColor.greenLight)
-    )));
+            foregroundColor: MaterialStateProperty.all(AppColor.grey),
+            overlayColor: MaterialStateProperty.all(AppColor.greenLight))));

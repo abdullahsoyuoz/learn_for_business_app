@@ -2,8 +2,8 @@ import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:learn_for_business_app/Controller/asset_constants.dart';
 import 'package:learn_for_business_app/Controller/utility.dart';
-import 'package:learn_for_business_app/View/Page/Getting%20Started/login_view.dart';
-import 'package:learn_for_business_app/View/Page/Getting%20Started/register_view.dart';
+import 'package:learn_for_business_app/View/Page/Auth/login_view.dart';
+import 'package:learn_for_business_app/View/Page/Auth/register_view.dart';
 import 'package:learn_for_business_app/View/Style/color.dart';
 
 class AuthPage extends StatelessWidget {
@@ -157,7 +157,7 @@ class AuthPage extends StatelessWidget {
                               child: value
                                   ? RegisterView(
                                       callback: () {
-                                        value = false;
+                                        isRegister.value = false;
                                       },
                                     )
                                   : LoginView(),

@@ -2,7 +2,7 @@ import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 final formatterBirthday = MaskTextInputFormatter(
     filter: {"#": RegExp(r'[0-9]')},
-    mask: '##.##.####',
+    mask: '## / ## / ####',
     type: MaskAutoCompletionType.lazy);
 
 final formatterCreditCard = MaskTextInputFormatter(
