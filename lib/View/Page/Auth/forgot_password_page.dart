@@ -6,7 +6,7 @@ import 'package:learn_for_business_app/View/Page/Auth/phone_verification_page.da
 import 'package:learn_for_business_app/View/Widget/customappbar.dart';
 
 class ForgotPasswordPage extends StatelessWidget {
-  ForgotPasswordPage({Key? key}) : super(key: key);
+  ForgotPasswordPage({Key key}) : super(key: key);
   final TextEditingController _phoneController = TextEditingController();
 
   @override
@@ -29,13 +29,14 @@ class ForgotPasswordPage extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.only(top: 20.0),
-            child: Text(forgotPasswordDescription),
+            child: Text(ctforgotPasswordDescription),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 40.0),
             child: TextFormField(
               controller: _phoneController,
               inputFormatters: [formatterPhoneWithCode],
+              style: const TextStyle(color: Colors.black),
               decoration: const InputDecoration(
                   label: Text('Telefon Numarası'),
                   hintText: '+90 ··· ··· ·· ··'),
@@ -48,7 +49,7 @@ class ForgotPasswordPage extends StatelessWidget {
                   Navigator.push(
                       context,
                       CupertinoPageRoute(
-                        builder: (context) => PhoneVerificationPage(),
+                        builder: (context) => const PhoneVerificationPage(),
                       ));
                 },
                 child: const Text('Doğrulama Kodu Gönder')),

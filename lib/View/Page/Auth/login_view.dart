@@ -7,7 +7,7 @@ import 'package:learn_for_business_app/View/Page/Auth/forgot_password_page.dart'
 import 'package:learn_for_business_app/View/View/mainpageview.dart';
 
 class LoginView extends StatelessWidget {
-  LoginView({Key? key}) : super(key: key);
+  LoginView({Key key}) : super(key: key);
   final ValueNotifier<bool> obscure = ValueNotifier(true);
 
   final TextEditingController _emailController = new TextEditingController();
@@ -25,6 +25,7 @@ class LoginView extends StatelessWidget {
             TextFormField(
               controller: _emailController,
               textInputAction: TextInputAction.next,
+              style: const TextStyle(color: Colors.black),
               decoration: const InputDecoration(
                 label: Text('E-Posta Adresi'),
               ),
@@ -37,6 +38,7 @@ class LoginView extends StatelessWidget {
                   return TextFormField(
                     controller: _passwordController,
                     obscureText: value,
+                    style: const TextStyle(color: Colors.black),
                     decoration: InputDecoration(
                       label: const Text('Parola'),
                       suffixIcon: Padding(
@@ -65,7 +67,7 @@ class LoginView extends StatelessWidget {
                   Navigator.push(
                       context,
                       CupertinoPageRoute(
-                        builder: (context) => const MainPageView(),
+                        builder: (context) =>  MainPageView(),
                       ));
                 },
                 child: const Text('Giriş'),

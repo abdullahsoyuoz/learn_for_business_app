@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:learn_for_business_app/Controller/constant_texts.dart';
+import 'package:learn_for_business_app/Controller/utility.dart';
 
 class VisionView extends StatelessWidget {
-  const VisionView({Key? key}) : super(key: key);
+  const VisionView({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -9,8 +11,23 @@ class VisionView extends StatelessWidget {
     
     return Scaffold(
       key: scaffoldKey,
-      body: const SizedBox.expand(
-        child: Center(child: Text('VisionView')),
+      body: SizedBox.expand(
+        child: SingleChildScrollView(
+         physics: const AlwaysScrollableScrollPhysics(parent: BouncingScrollPhysics()),
+          child: Column(
+            children: [
+              Image.asset(
+                'assets/image/dummy_about_3.jpg',
+                width: context.width,
+                fit: BoxFit.cover,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
+                child: Text(ctVisionDescription),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }

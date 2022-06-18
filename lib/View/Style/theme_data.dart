@@ -4,9 +4,8 @@ import 'package:learn_for_business_app/View/Style/color.dart';
 
 ThemeData appTheme() => ThemeData.light().copyWith(
     scaffoldBackgroundColor: Colors.white,
-    textTheme: TextTheme(
-      bodyText2: GoogleFonts.montserrat(color: Colors.black)
-    ),
+    textTheme:
+        TextTheme(bodyText2: GoogleFonts.montserrat(color: Colors.black)),
     inputDecorationTheme: InputDecorationTheme(
       hintStyle: TextStyle(color: AppColor.grey),
       floatingLabelStyle: TextStyle(color: AppColor.grey),
@@ -29,16 +28,31 @@ ThemeData appTheme() => ThemeData.light().copyWith(
     // BUTTONS
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ButtonStyle(
-          elevation: MaterialStateProperty.all(0),
-          fixedSize:
-              MaterialStateProperty.all(const Size(double.maxFinite, 50)),
-          shape: MaterialStateProperty.all(
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
-          foregroundColor: MaterialStateProperty.all(AppColor.greenDark),
-          backgroundColor: MaterialStateProperty.all(AppColor.greenLight),
-          textStyle: MaterialStateProperty.all(
-              const TextStyle(fontWeight: FontWeight.w700, fontSize: 17))),
+        elevation: MaterialStateProperty.all(0),
+        fixedSize: MaterialStateProperty.all(const Size(double.maxFinite, 50)),
+        shape: MaterialStateProperty.all(
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+        foregroundColor: MaterialStateProperty.all(AppColor.greenDark),
+        backgroundColor: MaterialStateProperty.all(AppColor.greenLight),
+        overlayColor: MaterialStateProperty.all(AppColor.greenLight),
+        textStyle: MaterialStateProperty.all(
+            const TextStyle(fontWeight: FontWeight.w500, fontSize: 15)),
+      ),
     ),
+    outlinedButtonTheme: OutlinedButtonThemeData(
+        style: ButtonStyle(
+      fixedSize: MaterialStateProperty.all(const Size(double.maxFinite, 50)),
+      side: MaterialStateProperty.all(BorderSide(
+        color: AppColor.greenLight,
+        width: 2,
+      )),
+      shape: MaterialStateProperty.all(
+          RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+      overlayColor: MaterialStateProperty.all(AppColor.greenLight),
+      foregroundColor: MaterialStateProperty.all(AppColor.greenDark),
+      textStyle: MaterialStateProperty.all(
+          const TextStyle(fontWeight: FontWeight.w500, fontSize: 15)),
+    )),
     textButtonTheme: TextButtonThemeData(
         style: ButtonStyle(
             foregroundColor: MaterialStateProperty.all(AppColor.grey),

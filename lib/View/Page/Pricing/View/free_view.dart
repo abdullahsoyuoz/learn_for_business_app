@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FreeView extends StatelessWidget {
-  const FreeView({Key? key}) : super(key: key);
+  const FreeView({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

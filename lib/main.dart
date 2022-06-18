@@ -20,7 +20,7 @@ void main() {
 }
 
 class AppStarter extends StatelessWidget {
-  const AppStarter({Key? key}) : super(key: key);
+  const AppStarter({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

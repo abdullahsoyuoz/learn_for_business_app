@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:learn_for_business_app/Controller/constant_texts.dart';
+import 'package:learn_for_business_app/Controller/utility.dart';
 
 class MissionView extends StatelessWidget {
-  const MissionView({Key? key}) : super(key: key);
+  const MissionView({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -9,8 +11,23 @@ class MissionView extends StatelessWidget {
     
     return Scaffold(
       key: scaffoldKey,
-      body: const SizedBox.expand(
-        child: Center(child: Text('MissionView')),
+      body: SizedBox.expand(
+        child: SingleChildScrollView(
+         physics: const AlwaysScrollableScrollPhysics(parent: BouncingScrollPhysics()),
+          child: Column(
+            children: [
+              Image.asset(
+                'assets/image/dummy_about_2.jpg',
+                width: context.width,
+                fit: BoxFit.cover,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
+                child: Text(ctMissionDescription),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }

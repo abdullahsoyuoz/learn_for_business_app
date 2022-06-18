@@ -5,7 +5,7 @@ import 'package:learn_for_business_app/View/Style/color.dart';
 
 AppBar customAppBar(
   BuildContext context,
-  String? title, {
+  String title, {
   List<Widget> actions = const [SizedBox()],
   double elevation = 1,
 }) {

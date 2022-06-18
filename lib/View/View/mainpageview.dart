@@ -5,53 +5,59 @@ import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:learn_for_business_app/Controller/mainpage_indexer.dart';
 import 'package:learn_for_business_app/Controller/utility.dart';
 import 'package:learn_for_business_app/Controller/zoom_controller.dart';
-import 'package:learn_for_business_app/Model/bottom_nav_bar_item.dart';
+import 'package:learn_for_business_app/Model/Const/bottom_nav_bar_item.dart';
+import 'package:learn_for_business_app/View/Page/Course/course_page.dart';
+import 'package:learn_for_business_app/View/Page/Pricing/pricing_page.dart';
+import 'package:learn_for_business_app/View/Page/Profile/profile_page.dart';
+import 'package:learn_for_business_app/View/Page/home_page.dart';
 import 'package:learn_for_business_app/View/Style/color.dart';
 import 'package:learn_for_business_app/View/View/drawer_view.dart';
-import 'package:learn_for_business_app/View/Widget/customappbar.dart';
 import 'package:learn_for_business_app/View/Widget/custommainappbar.dart';
 import 'package:provider/provider.dart';
 
 class MainPageView extends StatelessWidget {
-  const MainPageView({Key? key}) : super(key: key);
+  MainPageView({Key key}) : super(key: key);
+
+  final List<Widget> _views = [
+    const HomePage(),
+    const CoursePage(),
+    const PricingPage(),
+    const ProfilePage(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Consumer<MainPageIndexer>(builder: (context, provider, _) {
-      return ValueListenableBuilder<ZoomDrawerController>(
-        valueListenable: zoomController,
-        builder: (context, value, _) {
-          return ZoomDrawer(
-            controller: zoomController.value,
-            style: DrawerStyle.defaultStyle,
-            angle: 0,
-            mainScreenScale: 0,
-            mainScreenTapClose: true,
-            moveMenuScreen: true,
-            shrinkMainScreen: false,
-            mainScreenOverlayColor: Colors.black.withOpacity(.75),
-            menuScreenWidth: context.width * 0.85,
-            slideWidth: context.width * 0.85,
-            borderRadius: 0,
-            menuScreen: const DrawerView(),
-            mainScreen: Scaffold(
-              appBar: customMainAppbar(context, provider.mainpageindex),
-              bottomNavigationBar: buildNavBar(),
-              body: SizedBox.expand(
-                child: PageTransitionSwitcher(
-                  transitionBuilder: (child, primaryAnimation, secondaryAnimation) {
-                    return SharedAxisTransition(
-                      animation: primaryAnimation,
-                      secondaryAnimation: secondaryAnimation,
-                      transitionType: SharedAxisTransitionType.scaled,
-                      child: child,
-                    );
-                  },
-                ),
-              ),
+      return ZoomDrawer(
+        controller: zoomController.value,
+        style: DrawerStyle.defaultStyle,
+        angle: 0,
+        mainScreenScale: 0,
+        mainScreenTapClose: true,
+        moveMenuScreen: true,
+        shrinkMainScreen: false,
+        mainScreenOverlayColor: Colors.black.withOpacity(.55),
+        menuScreenWidth: context.width * 0.8,
+        slideWidth: context.width * 0.8,
+        borderRadius: 0,
+        menuScreen: DrawerView(),
+        mainScreen: Scaffold(
+          appBar: customMainAppbar(context, provider.mainpageindex),
+          bottomNavigationBar: buildNavBar(),
+          body: SizedBox.expand(
+            child: PageTransitionSwitcher(
+              transitionBuilder: (child, primaryAnimation, secondaryAnimation) {
+                return SharedAxisTransition(
+                  animation: primaryAnimation,
+                  secondaryAnimation: secondaryAnimation,
+                  transitionType: SharedAxisTransitionType.scaled,
+                  child: child,
+                );
+              },
+              child: _views[provider.mainpageindex],
             ),
-          );
-        }
+          ),
+        ),
       );
     });
   }

@@ -7,7 +7,7 @@ import 'package:learn_for_business_app/View/Page/PrivacyNTerms/privacy_policy_te
 import 'package:learn_for_business_app/View/Style/color.dart';
 
 class RegisterView extends StatelessWidget {
-  RegisterView({Key? key, required this.callback}) : super(key: key);
+  RegisterView({Key key, this.callback}) : super(key: key);
   final VoidCallback callback;
   final ValueNotifier<bool> checkPrivacy = ValueNotifier(false);
   final ValueNotifier<bool> obscurePassword = ValueNotifier(true);
@@ -32,6 +32,8 @@ class RegisterView extends StatelessWidget {
           children: [
             TextFormField(
               controller: _nicknameController,
+              textInputAction: TextInputAction.next,
+              style: const TextStyle(color: Colors.black),
               decoration: const InputDecoration(
                 label: Text('Kullanıcı Adı'),
               ),
@@ -40,6 +42,8 @@ class RegisterView extends StatelessWidget {
               padding: const EdgeInsets.only(top: 20.0),
               child: TextFormField(
                 controller: _emailController,
+                textInputAction: TextInputAction.next,
+                style: const TextStyle(color: Colors.black),
                 decoration: const InputDecoration(
                   label: Text('E-Posta'),
                 ),
@@ -49,6 +53,8 @@ class RegisterView extends StatelessWidget {
               padding: const EdgeInsets.only(top: 20.0),
               child: TextFormField(
                 controller: _phoneController,
+                textInputAction: TextInputAction.next,
+                style: const TextStyle(color: Colors.black),
                 inputFormatters: [formatterPhoneWithCode],
                 decoration: const InputDecoration(
                     label: Text('Telefon Numarası'),
@@ -59,6 +65,8 @@ class RegisterView extends StatelessWidget {
               padding: const EdgeInsets.only(top: 20.0),
               child: TextFormField(
                 controller: _birthdayController,
+                textInputAction: TextInputAction.next,
+                style: const TextStyle(color: Colors.black),
                 inputFormatters: [formatterBirthday],
                 decoration: const InputDecoration(
                     label: Text('Doğum Tarihi'), hintText: 'Gün / Ay / Yıl'),
@@ -72,6 +80,8 @@ class RegisterView extends StatelessWidget {
                     return TextFormField(
                       obscureText: value,
                       controller: _passwordController,
+                      textInputAction: TextInputAction.next,
+                      style: const TextStyle(color: Colors.black),
                       decoration: InputDecoration(
                         label: const Text('Parola'),
                         suffixIcon: Padding(
@@ -100,6 +110,7 @@ class RegisterView extends StatelessWidget {
                   builder: (context, value, _) {
                     return TextFormField(
                       controller: _passwordVerificationController,
+                      style: const TextStyle(color: Colors.black),
                       obscureText: value,
                       decoration: InputDecoration(
                         label: const Text('Parola (Tekrar)'),

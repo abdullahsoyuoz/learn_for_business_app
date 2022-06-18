@@ -7,7 +7,7 @@ import 'package:learn_for_business_app/View/Page/Auth/register_view.dart';
 import 'package:learn_for_business_app/View/Style/color.dart';
 
 class AuthPage extends StatelessWidget {
-  AuthPage({Key? key}) : super(key: key);
+  AuthPage({Key key}) : super(key: key);
 
   final ValueNotifier<bool> isRegister = ValueNotifier(false);
 

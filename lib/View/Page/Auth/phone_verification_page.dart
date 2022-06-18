@@ -8,7 +8,7 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:learn_for_business_app/View/Style/color.dart';
 
 class PhoneVerificationPage extends StatefulWidget {
-  PhoneVerificationPage({Key? key}) : super(key: key);
+  const PhoneVerificationPage({Key key}) : super(key: key);
 
   @override
   State<PhoneVerificationPage> createState() => _PhoneVerificationPageState();
@@ -16,7 +16,7 @@ class PhoneVerificationPage extends StatefulWidget {
 
 class _PhoneVerificationPageState extends State<PhoneVerificationPage> {
   GlobalKey scaffoldKey = GlobalKey<ScaffoldState>();
-  late TextEditingController _pincodeController;
+   TextEditingController _pincodeController;
 
   @override
   void initState() {
@@ -48,7 +48,7 @@ class _PhoneVerificationPageState extends State<PhoneVerificationPage> {
           ),
           Padding(
             padding: const EdgeInsets.only(top: 20.0),
-            child: Text(pincodeDescription),
+            child: Text(ctpincodeDescription),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 40.0),
