@@ -20,7 +20,7 @@ class MainPageView extends StatelessWidget {
   MainPageView({Key key}) : super(key: key);
 
   final List<Widget> _views = [
-    const HomePage(),
+    HomePage(),
     CoursePage(),
     const PricingPage(),
     const ProfilePage(),

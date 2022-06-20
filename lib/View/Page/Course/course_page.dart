@@ -9,11 +9,9 @@ import 'package:learn_for_business_app/View/Widget/course_card_widget.dart';
 
 class CoursePage extends StatelessWidget {
   CoursePage({Key key}) : super(key: key);
-
+  final GlobalKey scaffoldKey = GlobalKey<ScaffoldState>();
   final TextEditingController _searchController = new TextEditingController();
-
   final ValueNotifier<int> dropCategory = ValueNotifier(0);
-  GlobalKey scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {

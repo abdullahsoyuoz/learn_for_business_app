@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:learn_for_business_app/Model/dummy_course.dart';
+import 'package:learn_for_business_app/View/Style/color.dart';
 import 'package:learn_for_business_app/View/Widget/customappbar.dart';
 
 class ExamPage extends StatelessWidget {
@@ -14,8 +15,9 @@ class ExamPage extends StatelessWidget {
         key: scaffoldKey,
         appBar: customAppBar(context, 'Sınav'),
         body: SingleChildScrollView(
-         physics: const AlwaysScrollableScrollPhysics(parent: BouncingScrollPhysics()),
-         padding: const EdgeInsets.only(bottom: 240),
+          physics: const AlwaysScrollableScrollPhysics(
+              parent: BouncingScrollPhysics()),
+          padding: const EdgeInsets.only(bottom: 240),
           child: Column(
             children: [
               ListView.builder(
@@ -33,7 +35,8 @@ class ExamPage extends StatelessWidget {
                   vertical: 20,
                   horizontal: 20,
                 ),
-                child: ElevatedButton(onPressed: (){}, child: const Text('Gönder')),
+                child: ElevatedButton(
+                    onPressed: () {}, child: const Text('Gönder')),
               )
             ],
           ),
@@ -42,7 +45,7 @@ class ExamPage extends StatelessWidget {
 }
 
 class QuestionItem extends StatefulWidget {
-  QuestionItem({Key key, this.data, this.index}) : super(key: key);
+  const QuestionItem({Key key, this.data, this.index}) : super(key: key);
   final Exam data;
   final int index;
 
@@ -96,6 +99,9 @@ class _QuestionItemState extends State<QuestionItem> {
                     Radio(
                         value: index2,
                         groupValue: selectedAnswer,
+                        fillColor:
+                            MaterialStateProperty.all(AppColor.greenDark),
+                        activeColor: AppColor.greenDark,
                         onChanged: (i) {
                           setState(() {
                             selectedAnswer = i;

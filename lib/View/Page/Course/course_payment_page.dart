@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_new
+
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -23,9 +25,10 @@ class _CoursePaymentPageState extends State<CoursePaymentPage> {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: no_leading_underscores_for_local_identifiers
     List<Widget> _paymentViews = [
       PaymentWithCreditView(),
-      SizedBox(),
+      const SizedBox(),
     ];
     return Scaffold(
       key: scaffoldKey,
@@ -231,7 +234,7 @@ class _CoursePaymentPageState extends State<CoursePaymentPage> {
                       ])),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 20),
+              padding: const EdgeInsets.only(top: 20),
               child: SizedBox(
                 width: context.width,
                 child: PageTransitionSwitcher(
@@ -334,9 +337,9 @@ class PaymentWithCreditView extends StatelessWidget {
                 ],
               ),
             ),
-            Padding(padding: EdgeInsets.only(top: 20), child: Text('Kredi kartı ödeme sistemi Türkiye’nin önde gelen ödeme sistemi olan iyzico tarafindan sağlanmaktadır. Kredi kartı bilgileriniz hiç bir şekilde saklanmamaktadir.', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey),),),
-            Padding(padding: EdgeInsets.only(top: 20), child: Text('Ödeme işlemine devam ettiğiniz takdirde Mesafeli Satış Sözleşmesini kabul etmiş sayılırsınız.', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey),),),
-            Padding(padding: EdgeInsets.only(top: 20), child: ElevatedButton(onPressed: (){}, child: const Text('Ödeme Yap')),),
+            const Padding(padding: EdgeInsets.only(top: 20), child: Text('Kredi kartı ödeme sistemi Türkiye’nin önde gelen ödeme sistemi olan iyzico tarafindan sağlanmaktadır. Kredi kartı bilgileriniz hiç bir şekilde saklanmamaktadir.', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey),),),
+            const Padding(padding: EdgeInsets.only(top: 20), child: Text('Ödeme işlemine devam ettiğiniz takdirde Mesafeli Satış Sözleşmesini kabul etmiş sayılırsınız.', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey),),),
+            Padding(padding: const EdgeInsets.only(top: 20), child: ElevatedButton(onPressed: (){}, child: const Text('Ödeme Yap')),),
           ],
         ),
       ),

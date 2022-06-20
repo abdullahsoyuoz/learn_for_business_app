@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_new
+
 import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
@@ -168,7 +170,7 @@ class MyCourseWidget extends StatelessWidget {
         Navigator.push(
             context,
             CupertinoPageRoute(
-              builder: (context) => const MyCourseDetailPage(),
+              builder: (context) => MyCourseDetailPage(data: data),
             ));
       },
       child: Padding(

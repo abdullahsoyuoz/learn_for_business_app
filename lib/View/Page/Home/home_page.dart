@@ -1,7 +1,10 @@
+import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:learn_for_business_app/Controller/asset_constants.dart';
 import 'package:learn_for_business_app/Controller/extension.dart';
 import 'package:learn_for_business_app/Model/dummy_course.dart';
+import 'package:learn_for_business_app/View/Style/color.dart';
 import 'package:learn_for_business_app/View/Widget/course_card_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -21,13 +24,20 @@ class HomePage extends StatelessWidget {
             SizedBox(
               width: context.width,
               height: 250,
-              child: const ColoredBox(color: Colors.red),
+              child: Carousel(
+                images: List.generate(5, (index) => Image.asset('assets/image/dummy_about_1.jpg', fit: BoxFit.cover)).toList(),
+                dotBgColor: Colors.black54,
+                dotIncreaseSize: 1.5,
+                dotIncreasedColor: AppColor.greenDark,
+                indicatorBgPadding: 10,
+              )
             ),
             Padding(
               padding: const EdgeInsets.only(top: 20, left: 20),
               child: Text(
                 'Popüler Kurslar',
-                style: GoogleFonts.montserrat(fontSize: 20, fontWeight: FontWeight.bold),
+                style: GoogleFonts.montserrat(
+                    fontSize: 20, fontWeight: FontWeight.bold),
               ),
             ),
             GridView.builder(

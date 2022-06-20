@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:learn_for_business_app/Controller/mainpage_indexer.dart';
 import 'package:learn_for_business_app/Controller/zoom_controller.dart';
-import 'package:learn_for_business_app/Model/dummy_course.dart';
 import 'package:learn_for_business_app/View/Page/About/about_page.dart';
 import 'package:learn_for_business_app/View/Page/Contact/contact_page.dart';
 import 'package:learn_for_business_app/View/Page/Course/my_course_page.dart';
