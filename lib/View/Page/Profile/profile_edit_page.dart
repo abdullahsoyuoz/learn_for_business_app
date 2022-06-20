@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:learn_for_business_app/Model/fake_user.dart';
 import 'package:learn_for_business_app/View/Style/color.dart';
 import 'package:learn_for_business_app/View/Widget/customappbar.dart';
@@ -54,7 +55,7 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
         TextFormField(
           controller: _nameController,
           textInputAction: TextInputAction.next,
-          style: const TextStyle(color: Colors.black),
+          style:  GoogleFonts.montserrat(color: Colors.black),
           decoration: const InputDecoration(
             label: Text('Ad'),
           ),
@@ -64,7 +65,7 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
           child: TextFormField(
             controller: _surnameController,
             textInputAction: TextInputAction.next,
-            style: const TextStyle(color: Colors.black),
+            style:  GoogleFonts.montserrat(color: Colors.black),
             decoration: const InputDecoration(
               label: Text('Soyad'),
             ),
@@ -75,7 +76,7 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
           child: TextFormField(
             controller: _unvanController,
             textInputAction: TextInputAction.next,
-            style: const TextStyle(color: Colors.black),
+            style:  GoogleFonts.montserrat(color: Colors.black),
             decoration: const InputDecoration(
               label: Text('Ünvan'),
             ),
@@ -86,7 +87,7 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
           child: TextFormField(
             controller: _phoneController,
             textInputAction: TextInputAction.next,
-            style: const TextStyle(color: Colors.black),
+            style:  GoogleFonts.montserrat(color: Colors.black),
             decoration: const InputDecoration(
               label: Text('Telefon'),
             ),
@@ -97,7 +98,7 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
           child: TextFormField(
             controller: _emailController,
             textInputAction: TextInputAction.next,
-            style: const TextStyle(color: Colors.black),
+            style:  GoogleFonts.montserrat(color: Colors.black),
             decoration: const InputDecoration(
               label: Text('E-Posta'),
             ),
@@ -116,7 +117,7 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                   padding: const EdgeInsets.only(left: 20.0),
                   child: Text(
                     'İl',
-                    style: TextStyle(
+                    style: GoogleFonts.montserrat(
                       fontSize: 14,
                       color: AppColor.grey,
                     ),
@@ -127,14 +128,14 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                   child: FaIcon(FontAwesomeIcons.chevronDown),
                 ),
                 underline: const SizedBox(),
-                items: const [
+                items: [
                   DropdownMenuItem(
                     value: 0,
                     child: Padding(
-                      padding: EdgeInsets.only(left: 20.0),
+                      padding: const EdgeInsets.only(left: 20.0),
                       child: Text(
                         'İstanbul',
-                        style: TextStyle(
+                        style: GoogleFonts.montserrat(
                           fontSize: 14,
                           color: Colors.black,
                         ),
@@ -144,10 +145,10 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                   DropdownMenuItem(
                     value: 1,
                     child: Padding(
-                      padding: EdgeInsets.only(left: 20.0),
+                      padding: const EdgeInsets.only(left: 20.0),
                       child: Text(
                         'Kocaeli',
-                        style: TextStyle(
+                        style: GoogleFonts.montserrat(
                           fontSize: 14,
                           color: Colors.black,
                         ),
@@ -175,7 +176,7 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                   padding: const EdgeInsets.only(left: 20.0),
                   child: Text(
                     'İlçe',
-                    style: TextStyle(
+                    style: GoogleFonts.montserrat(
                       fontSize: 14,
                       color: AppColor.grey,
                     ),
@@ -186,14 +187,14 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                   child: FaIcon(FontAwesomeIcons.chevronDown),
                 ),
                 underline: const SizedBox(),
-                items: const [
+                items: [
                   DropdownMenuItem(
                     value: 0,
                     child: Padding(
-                      padding: EdgeInsets.only(left: 20.0),
+                      padding: const EdgeInsets.only(left: 20.0),
                       child: Text(
                         'İstanbul',
-                        style: TextStyle(
+                        style: GoogleFonts.montserrat(
                           fontSize: 14,
                           color: Colors.black,
                         ),
@@ -203,10 +204,10 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                   DropdownMenuItem(
                     value: 1,
                     child: Padding(
-                      padding: EdgeInsets.only(left: 20.0),
+                      padding: const EdgeInsets.only(left: 20.0),
                       child: Text(
                         'Kocaeli',
-                        style: TextStyle(
+                        style: GoogleFonts.montserrat(
                           fontSize: 14,
                           color: Colors.black,
                         ),
@@ -227,7 +228,7 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
             controller: _addressController,
             textInputAction: TextInputAction.done,
             maxLines: 10,
-            style: const TextStyle(color: Colors.black),
+            style:  GoogleFonts.montserrat(color: Colors.black),
             decoration: const InputDecoration(
                 label: Text('Adres'),
                 hintText: 'Adresiniz',

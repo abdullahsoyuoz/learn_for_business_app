@@ -10,7 +10,7 @@ AppBar customAppBar(
   double elevation = 1,
 }) {
   return AppBar(
-    toolbarHeight: 95,
+    toolbarHeight: 75,
     automaticallyImplyLeading: true,
     backgroundColor: Colors.white,
     shadowColor: Colors.grey.shade200,
@@ -45,7 +45,7 @@ AppBar customAppBar(
     title: title == null ? const SizedBox() : FittedBox(
       child: Text(
         title,
-        style: GoogleFonts.montserrat(fontSize: 16, color: Colors.black),
+        style: GoogleFonts.montserrat(fontSize: 16, color: Colors.black, fontWeight: FontWeight.bold),
       ),
     ),
   );

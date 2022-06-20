@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:learn_for_business_app/Controller/constant_texts.dart';
 import 'package:learn_for_business_app/View/Page/Auth/auth_page.dart';
 import 'package:learn_for_business_app/View/Widget/customappbar.dart';
@@ -29,9 +30,9 @@ class NewPasswordPage extends StatelessWidget {
         padding:
             const EdgeInsets.only(top: 30, left: 20, right: 20, bottom: 120),
         children: [
-          const Text(
+          Text(
             'Yeni Parola\nOluştur',
-            style: TextStyle(fontSize: 26, fontWeight: FontWeight.w600),
+            style: GoogleFonts.montserrat(fontSize: 26, fontWeight: FontWeight.w600),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 20.0),
@@ -45,7 +46,7 @@ class NewPasswordPage extends StatelessWidget {
                   return TextFormField(
                     obscureText: value,
                     controller: _passwordController,
-                    style: const TextStyle(color: Colors.black),
+                    style: GoogleFonts.montserrat(color: Colors.black),
                     textInputAction: TextInputAction.next,
                     decoration: InputDecoration(
                       label: const Text('Parola'),
@@ -75,7 +76,7 @@ class NewPasswordPage extends StatelessWidget {
                 builder: (context, value, _) {
                   return TextFormField(
                     controller: _passwordVerificationController,
-                    style: const TextStyle(color: Colors.black),
+                    style: GoogleFonts.montserrat(color: Colors.black),
                     obscureText: value,
                     decoration: InputDecoration(
                       label: const Text('Parola (Tekrar)'),

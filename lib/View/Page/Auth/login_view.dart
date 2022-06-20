@@ -3,6 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:learn_for_business_app/View/Page/Auth/forgot_password_page.dart';
 import 'package:learn_for_business_app/View/View/mainpageview.dart';
 
@@ -25,7 +26,7 @@ class LoginView extends StatelessWidget {
             TextFormField(
               controller: _emailController,
               textInputAction: TextInputAction.next,
-              style: const TextStyle(color: Colors.black),
+              style:  GoogleFonts.montserrat(color: Colors.black),
               decoration: const InputDecoration(
                 label: Text('E-Posta Adresi'),
               ),
@@ -38,7 +39,7 @@ class LoginView extends StatelessWidget {
                   return TextFormField(
                     controller: _passwordController,
                     obscureText: value,
-                    style: const TextStyle(color: Colors.black),
+                    style:  GoogleFonts.montserrat(color: Colors.black),
                     decoration: InputDecoration(
                       label: const Text('Parola'),
                       suffixIcon: Padding(

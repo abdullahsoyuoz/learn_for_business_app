@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:learn_for_business_app/Controller/asset_constants.dart';
 
 class ContactInfoView extends StatelessWidget {
@@ -41,9 +42,7 @@ class ContactInfoItemWidget extends StatelessWidget {
       child: Card(
         color: Colors.grey.shade100,
         elevation: 0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10)
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
@@ -57,13 +56,20 @@ class ContactInfoItemWidget extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 8.0),
-                    child: Text(data.title, style: const TextStyle(fontSize: 16),),
+                    child: Text(
+                      data.title,
+                      style: GoogleFonts.montserrat(fontSize: 16),
+                    ),
                   )
                 ],
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 12.0),
-                child: Text(data.description, style: const TextStyle(fontSize: 16,color: Colors.black),),
+                child: Text(
+                  data.description,
+                  style:
+                      GoogleFonts.montserrat(fontSize: 16, color: Colors.black),
+                ),
               )
             ],
           ),

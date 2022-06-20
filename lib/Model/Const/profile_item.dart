@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:learn_for_business_app/Controller/asset_constants.dart';
 import 'package:learn_for_business_app/View/Page/Contact/contact_page.dart';
+import 'package:learn_for_business_app/View/Page/Course/my_course_page.dart';
 import 'package:learn_for_business_app/View/Page/PrivacyNTerms/privacy_policy_terms_page.dart';
 import 'package:learn_for_business_app/View/Page/Profile/password_renew_page.dart';
 
@@ -22,6 +23,11 @@ List<ProfileMenuItem> profileMenuItems = [
 Future<void> profileItemRouteHelper(BuildContext context, int index) async {
   switch (index) {
     case 0:
+      Navigator.push(
+          context,
+          CupertinoPageRoute(
+            builder: (context) => MyCoursePage(),
+          ));
       break;
     case 1:
       Navigator.push(

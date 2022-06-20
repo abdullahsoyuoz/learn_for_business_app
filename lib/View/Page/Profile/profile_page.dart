@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:learn_for_business_app/Controller/asset_constants.dart';
-import 'package:learn_for_business_app/Controller/utility.dart';
+import 'package:learn_for_business_app/Controller/extension.dart';
 import 'package:learn_for_business_app/Model/Const/profile_item.dart';
 import 'package:learn_for_business_app/Model/fake_user.dart';
 import 'package:learn_for_business_app/View/Page/Profile/profile_edit_page.dart';
@@ -41,12 +42,12 @@ class ProfilePage extends StatelessWidget {
                             children: [
                               Text(
                                 user.name,
-                                style: const TextStyle(
+                                style:  GoogleFonts.montserrat(
                                     fontSize: 18, fontWeight: FontWeight.bold),
                               ),
                               Text(
                                 'Yazılımcı',
-                                style: TextStyle(
+                                style: GoogleFonts.montserrat(
                                     color: Colors.grey.shade500,
                                     fontWeight: FontWeight.w600),
                               ),
@@ -60,7 +61,7 @@ class ProfilePage extends StatelessWidget {
                             onTap: () => Navigator.push(
                                 context,
                                 CupertinoPageRoute(
-                                  builder: (context) => ProfileEditPage(),
+                                  builder: (context) => const ProfileEditPage(),
                                 )),
                             child: Card(
                               margin: EdgeInsets.zero,
@@ -141,7 +142,7 @@ class ProfileItemWidget extends StatelessWidget {
                         width: 30, color: AppColor.greenDark),
                     Padding(
                       padding: const EdgeInsets.only(left: 10.0),
-                      child: Text(data.title, style: const TextStyle(color: Colors.black),),
+                      child: Text(data.title, style:  GoogleFonts.montserrat(color: Colors.black),),
                     )
                   ]),
                 ),

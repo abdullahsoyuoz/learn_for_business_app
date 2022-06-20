@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:learn_for_business_app/Controller/constant_texts.dart';
 import 'package:learn_for_business_app/Controller/input_formatters.dart';
 import 'package:learn_for_business_app/View/Page/Auth/phone_verification_page.dart';
@@ -23,9 +24,9 @@ class ForgotPasswordPage extends StatelessWidget {
         padding:
             const EdgeInsets.only(top: 30, left: 20, right: 20, bottom: 120),
         children: [
-          const Text(
+          Text(
             'Şifremi\nUnuttum',
-            style: TextStyle(fontSize: 26, fontWeight: FontWeight.w600),
+            style: GoogleFonts.montserrat(fontSize: 26, fontWeight: FontWeight.w600),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 20.0),
@@ -36,7 +37,7 @@ class ForgotPasswordPage extends StatelessWidget {
             child: TextFormField(
               controller: _phoneController,
               inputFormatters: [formatterPhoneWithCode],
-              style: const TextStyle(color: Colors.black),
+              style: GoogleFonts.montserrat(color: Colors.black),
               decoration: const InputDecoration(
                   label: Text('Telefon Numarası'),
                   hintText: '+90 ··· ··· ·· ··'),

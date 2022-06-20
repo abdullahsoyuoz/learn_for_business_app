@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learn_for_business_app/Controller/constant_texts.dart';
-import 'package:learn_for_business_app/Controller/utility.dart';
+import 'package:learn_for_business_app/Controller/extension.dart';
 
 class AboutUsView extends StatelessWidget {
   const AboutUsView({Key key}) : super(key: key);

@@ -1,6 +1,7 @@
 import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
-import 'package:learn_for_business_app/Controller/utility.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:learn_for_business_app/Controller/extension.dart';
 import 'package:learn_for_business_app/View/Widget/customappbar.dart';
 
 // ignore: must_be_immutable
@@ -29,9 +30,9 @@ class PrivacyPage extends StatelessWidget {
                   left: 20,
                   right: 20),
               children: [
-                const Text(
+                Text(
                   '1. Gizlilik Sözleşmesi',
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                  style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 20.0),
@@ -39,11 +40,11 @@ class PrivacyPage extends StatelessWidget {
                     Faker().lorem.sentences(10).toString().replaceAll('[', '').replaceAll(']', ''),
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.only(top: 20.0),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20.0),
                   child: Text(
                     '2. Kullanım Koşulları',
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),
                   ),
                 ),
                 Padding(
@@ -52,11 +53,11 @@ class PrivacyPage extends StatelessWidget {
                     Faker().lorem.sentences(10).toString().replaceAll('[', '').replaceAll(']', ''),
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.only(top: 20.0),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20.0),
                   child: Text(
                     '3. Politikalar',
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),
                   ),
                 ),
                 Padding(

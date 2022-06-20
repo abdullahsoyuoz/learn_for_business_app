@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:learn_for_business_app/Controller/asset_constants.dart';
 import 'package:learn_for_business_app/Controller/zoom_controller.dart';
 import 'package:learn_for_business_app/View/Style/color.dart';
@@ -11,7 +12,7 @@ AppBar customMainAppbar(
   double elevation = 1,
 }) {
   return AppBar(
-      toolbarHeight: 95,
+      toolbarHeight: 75,
       automaticallyImplyLeading: true,
       backgroundColor: Colors.white,
       shadowColor: Colors.grey.shade200,
@@ -54,19 +55,22 @@ Widget getTitle(int index) {
         height: 50,
       );
     case 1:
-      return const Text(
+      return Text(
         'Kurslar',
-        style: TextStyle(color: Colors.black),
+        style: GoogleFonts.montserrat(
+            fontSize: 16, color: Colors.black, fontWeight: FontWeight.bold),
       );
     case 2:
-      return const Text(
+      return Text(
         'Fiyatlarımız',
-        style: TextStyle(color: Colors.black),
+        style: GoogleFonts.montserrat(
+            fontSize: 16, color: Colors.black, fontWeight: FontWeight.bold),
       );
     case 3:
-      return const Text(
+      return Text(
         'Profilim',
-        style: TextStyle(color: Colors.black),
+        style: GoogleFonts.montserrat(
+            fontSize: 16, color: Colors.black, fontWeight: FontWeight.bold),
       );
     default:
       return const SizedBox();

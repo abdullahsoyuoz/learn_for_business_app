@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:learn_for_business_app/Controller/utility.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:learn_for_business_app/Controller/extension.dart';
 import 'package:learn_for_business_app/Model/Const/pricing.dart';
 import 'package:learn_for_business_app/View/Page/Pricing/View/business_view.dart';
 import 'package:learn_for_business_app/View/Page/Pricing/View/free_view.dart';
@@ -34,7 +35,7 @@ class _PricingPageState extends State<PricingPage>
         child: FittedBox(
           child: Text(
             e.tabTitle,
-            style: const TextStyle(color: Colors.black),
+            style: GoogleFonts.montserrat(color: Colors.black),
           ),
         ));
   }).toList();
@@ -90,7 +91,7 @@ class _PricingPageState extends State<PricingPage>
                         children: [
                           Text(
                             data.title,
-                            style: TextStyle(
+                            style: GoogleFonts.montserrat(
                               fontSize: 18,
                               color: AppColor.greenDark,
                             ),
@@ -108,7 +109,7 @@ class _PricingPageState extends State<PricingPage>
                                       data.fee == 0
                                           ? 'Ücretsiz'
                                           : '${data.fee} TL',
-                                      style: TextStyle(
+                                      style: GoogleFonts.montserrat(
                                         color: AppColor.greenDark,
                                         fontSize: 18,
                                         fontWeight: FontWeight.bold,
@@ -174,7 +175,7 @@ class _PricingPageState extends State<PricingPage>
                                     children: [
                                       Text(
                                         'Fiyatlandırma',
-                                        style: TextStyle(
+                                        style: GoogleFonts.montserrat(
                                           fontSize: 18,
                                           color: AppColor.greenDark,
                                         ),
@@ -185,12 +186,13 @@ class _PricingPageState extends State<PricingPage>
                               ),
                             ),
                           ),
-                          const Padding(
-                            padding:
-                                EdgeInsets.only(top: 8.0, left: 20, right: 20),
+                          Padding(
+                            padding: const EdgeInsets.only(
+                                top: 8.0, left: 20, right: 20),
                             child: Text(
                               'Kurumsal üyelikte eğitim alacak olanlar şirket e-mail adresiyle kayıt olmalıdır.',
-                              style: TextStyle(color: Colors.black),
+                              style:
+                                  GoogleFonts.montserrat(color: Colors.black),
                             ),
                           ),
                           ListView.builder(
@@ -222,7 +224,7 @@ class _PricingPageState extends State<PricingPage>
                                                 const EdgeInsets.only(top: 8.0),
                                             child: Text(
                                               businessPricingItem.title,
-                                              style: const TextStyle(
+                                              style: GoogleFonts.montserrat(
                                                   fontWeight: FontWeight.w600),
                                             )),
                                         Padding(
@@ -239,7 +241,7 @@ class _PricingPageState extends State<PricingPage>
                                                       BorderRadius.circular(5)),
                                               child: Text(
                                                 "${businessPricingItem.pricing} TL + KDV",
-                                                style: TextStyle(
+                                                style: GoogleFonts.montserrat(
                                                   color: AppColor.greenDark,
                                                   fontSize: 19,
                                                   fontWeight: FontWeight.bold,
@@ -273,7 +275,7 @@ class _PricingPageState extends State<PricingPage>
                               children: [
                                 Text(
                                   'Eğitimler',
-                                  style: TextStyle(
+                                  style: GoogleFonts.montserrat(
                                     fontSize: 18,
                                     color: AppColor.greenDark,
                                   ),
@@ -302,12 +304,14 @@ class _PricingPageState extends State<PricingPage>
                     ListView.builder(
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
-                          padding: const EdgeInsets.only(top: 10.0),
+                      padding: const EdgeInsets.only(top: 10.0),
                       itemCount: trainingList.length,
                       itemBuilder: (c, index) {
                         final dataTraing = trainingList[index];
                         return ColoredBox(
-                          color: index % 2 == 0 ? Colors.grey.shade200 : Colors.white,
+                          color: index % 2 == 0
+                              ? Colors.grey.shade200
+                              : Colors.white,
                           child: Padding(
                             padding: const EdgeInsets.symmetric(vertical: 5.0),
                             child: Row(

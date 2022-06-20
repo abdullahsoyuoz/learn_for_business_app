@@ -2,14 +2,15 @@ import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/config.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:learn_for_business_app/Controller/mainpage_indexer.dart';
-import 'package:learn_for_business_app/Controller/utility.dart';
+import 'package:learn_for_business_app/Controller/extension.dart';
 import 'package:learn_for_business_app/Controller/zoom_controller.dart';
 import 'package:learn_for_business_app/Model/Const/bottom_nav_bar_item.dart';
 import 'package:learn_for_business_app/View/Page/Course/course_page.dart';
+import 'package:learn_for_business_app/View/Page/Home/home_page.dart';
 import 'package:learn_for_business_app/View/Page/Pricing/pricing_page.dart';
 import 'package:learn_for_business_app/View/Page/Profile/profile_page.dart';
-import 'package:learn_for_business_app/View/Page/home_page.dart';
 import 'package:learn_for_business_app/View/Style/color.dart';
 import 'package:learn_for_business_app/View/View/drawer_view.dart';
 import 'package:learn_for_business_app/View/Widget/custommainappbar.dart';
@@ -20,7 +21,7 @@ class MainPageView extends StatelessWidget {
 
   final List<Widget> _views = [
     const HomePage(),
-    const CoursePage(),
+    CoursePage(),
     const PricingPage(),
     const ProfilePage(),
   ];
@@ -69,9 +70,9 @@ class MainPageView extends StatelessWidget {
           onTap: (index) => provider.setIndex = index,
           type: BottomNavigationBarType.fixed,
           selectedLabelStyle:
-              const TextStyle(fontSize: 15, fontWeight: FontWeight.w700),
+               GoogleFonts.montserrat(fontSize: 15, fontWeight: FontWeight.w700),
           unselectedLabelStyle:
-              const TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+               GoogleFonts.montserrat(fontSize: 14, fontWeight: FontWeight.w500),
           selectedItemColor: AppColor.greenDark,
           unselectedItemColor: AppColor.grey,
           items: navbarList

@@ -1,6 +1,7 @@
 // ignore_for_file: no_leading_underscores_for_local_identifiers, unnecessary_new
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ContactFormView extends StatelessWidget {
   const ContactFormView({Key key}) : super(key: key);
@@ -28,7 +29,7 @@ class ContactFormView extends StatelessWidget {
               TextFormField(
                 controller: _nameController,
                 textInputAction: TextInputAction.next,
-                style: const TextStyle(color: Colors.black),
+                style:  GoogleFonts.montserrat(color: Colors.black),
                 decoration: const InputDecoration(
                   label: Text('Adınız'),
                 ),
@@ -38,7 +39,7 @@ class ContactFormView extends StatelessWidget {
                 child: TextFormField(
                   controller: _emailController,
                   textInputAction: TextInputAction.next,
-                  style: const TextStyle(color: Colors.black),
+                  style: GoogleFonts.montserrat(color: Colors.black),
                   decoration: const InputDecoration(
                     label: Text('E-posta'),
                   ),
@@ -50,7 +51,7 @@ class ContactFormView extends StatelessWidget {
                   controller: _messageController,
                   textInputAction: TextInputAction.done,
                   maxLines: 10,
-                  style: const TextStyle(color: Colors.black),
+                  style:  GoogleFonts.montserrat(color: Colors.black),
                   decoration: const InputDecoration(
                       label: Text('Mesaj'),
                       hintText: 'Mesajınız',

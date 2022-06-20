@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:learn_for_business_app/Controller/constant_texts.dart';
 import 'package:learn_for_business_app/Model/fake_user.dart';
 
@@ -19,11 +20,11 @@ class StaffView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Padding(
-                padding: EdgeInsets.only(left: 20.0, right: 20, top: 20),
+              Padding(
+                padding: const EdgeInsets.only(left: 20.0, right: 20, top: 20),
                 child: Text(
                   'Artan Kadromuz',
-                  style: TextStyle(fontSize: 16),
+                  style: GoogleFonts.montserrat(fontSize: 16),
                 ),
               ),
               Padding(
@@ -81,15 +82,15 @@ class StaffItemWidget extends StatelessWidget {
                     child: Text(
                       user.name,
                       style:
-                          const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                          GoogleFonts.montserrat(fontSize: 16, fontWeight: FontWeight.w600),
                     ),
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.only(top: 3.0),
+                Padding(
+                  padding: const EdgeInsets.only(top: 3.0),
                   child: Text(
                     'Kurucu',
-                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
+                    style: GoogleFonts.montserrat(fontSize: 15, fontWeight: FontWeight.w400),
                   ),
                 ),
               ],

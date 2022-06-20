@@ -3,7 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:learn_for_business_app/Controller/asset_constants.dart';
 import 'package:learn_for_business_app/Controller/mainpage_indexer.dart';
-import 'package:learn_for_business_app/Controller/utility.dart';
+import 'package:learn_for_business_app/Controller/extension.dart';
 import 'package:learn_for_business_app/Controller/zoom_controller.dart';
 import 'package:learn_for_business_app/Model/fake_user.dart';
 import 'package:learn_for_business_app/Model/Const/drawer_item.dart';
@@ -71,13 +71,13 @@ class DrawerView extends StatelessWidget {
                                       children: [
                                         Text(
                                           'Merhaba',
-                                          style: TextStyle(
+                                          style: GoogleFonts.montserrat(
                                               color: Colors.grey.shade600,
                                               fontSize: 14),
                                         ),
                                         Text(
                                           user.name,
-                                          style: const TextStyle(
+                                          style:  GoogleFonts.montserrat(
                                               color: Colors.black,
                                               fontSize: 16,
                                               fontWeight: FontWeight.w900),
@@ -176,7 +176,7 @@ class DrawerItemWidget extends StatelessWidget {
               children: [
                 Text(
                   data.title,
-                  style: const TextStyle(fontSize: 16),
+                  style:  GoogleFonts.montserrat(fontSize: 16),
                 ),
                 const FaIcon(
                   FontAwesomeIcons.chevronRight,

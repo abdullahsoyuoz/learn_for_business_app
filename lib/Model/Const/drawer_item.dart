@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:learn_for_business_app/Controller/mainpage_indexer.dart';
 import 'package:learn_for_business_app/Controller/zoom_controller.dart';
+import 'package:learn_for_business_app/Model/dummy_course.dart';
 import 'package:learn_for_business_app/View/Page/About/about_page.dart';
 import 'package:learn_for_business_app/View/Page/Contact/contact_page.dart';
+import 'package:learn_for_business_app/View/Page/Course/my_course_page.dart';
 import 'package:learn_for_business_app/View/Page/PrivacyNTerms/privacy_policy_terms_page.dart';
 import 'package:learn_for_business_app/View/Page/Questions/faq_page.dart';
 import 'package:provider/provider.dart';
@@ -31,7 +33,11 @@ Future<void> drawerItemRouteHelper(BuildContext context, int index) async {
       Future(() {
         zoomController.value.close.call();
       }).whenComplete(() {
-        Provider.of<MainPageIndexer>(context, listen: false).setIndex = 1;
+        Navigator.push(
+            context,
+            CupertinoPageRoute(
+              builder: (context) => MyCoursePage(),
+            ));
       });
       break;
     case 1:

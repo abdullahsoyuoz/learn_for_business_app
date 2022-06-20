@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:learn_for_business_app/Controller/input_formatters.dart';
 import 'package:learn_for_business_app/View/Page/PrivacyNTerms/privacy_policy_terms_page.dart';
 import 'package:learn_for_business_app/View/Style/color.dart';
@@ -33,7 +34,7 @@ class RegisterView extends StatelessWidget {
             TextFormField(
               controller: _nicknameController,
               textInputAction: TextInputAction.next,
-              style: const TextStyle(color: Colors.black),
+              style: GoogleFonts.montserrat(color: Colors.black),
               decoration: const InputDecoration(
                 label: Text('Kullanıcı Adı'),
               ),
@@ -43,7 +44,7 @@ class RegisterView extends StatelessWidget {
               child: TextFormField(
                 controller: _emailController,
                 textInputAction: TextInputAction.next,
-                style: const TextStyle(color: Colors.black),
+                style: GoogleFonts.montserrat(color: Colors.black),
                 decoration: const InputDecoration(
                   label: Text('E-Posta'),
                 ),
@@ -54,7 +55,7 @@ class RegisterView extends StatelessWidget {
               child: TextFormField(
                 controller: _phoneController,
                 textInputAction: TextInputAction.next,
-                style: const TextStyle(color: Colors.black),
+                style: GoogleFonts.montserrat(color: Colors.black),
                 inputFormatters: [formatterPhoneWithCode],
                 decoration: const InputDecoration(
                     label: Text('Telefon Numarası'),
@@ -66,7 +67,7 @@ class RegisterView extends StatelessWidget {
               child: TextFormField(
                 controller: _birthdayController,
                 textInputAction: TextInputAction.next,
-                style: const TextStyle(color: Colors.black),
+                style: GoogleFonts.montserrat(color: Colors.black),
                 inputFormatters: [formatterBirthday],
                 decoration: const InputDecoration(
                     label: Text('Doğum Tarihi'), hintText: 'Gün / Ay / Yıl'),
@@ -81,7 +82,7 @@ class RegisterView extends StatelessWidget {
                       obscureText: value,
                       controller: _passwordController,
                       textInputAction: TextInputAction.next,
-                      style: const TextStyle(color: Colors.black),
+                      style: GoogleFonts.montserrat(color: Colors.black),
                       decoration: InputDecoration(
                         label: const Text('Parola'),
                         suffixIcon: Padding(
@@ -110,7 +111,7 @@ class RegisterView extends StatelessWidget {
                   builder: (context, value, _) {
                     return TextFormField(
                       controller: _passwordVerificationController,
-                      style: const TextStyle(color: Colors.black),
+                      style: GoogleFonts.montserrat(color: Colors.black),
                       obscureText: value,
                       decoration: InputDecoration(
                         label: const Text('Parola (Tekrar)'),
@@ -159,7 +160,8 @@ class RegisterView extends StatelessWidget {
                           text: TextSpan(children: [
                         TextSpan(
                             text: 'Privacy policy and terms',
-                            style: const TextStyle(color: Colors.blueAccent),
+                            style: GoogleFonts.montserrat(
+                                color: Colors.blueAccent),
                             recognizer: TapGestureRecognizer()
                               ..onTap = () {
                                 Navigator.push(
@@ -172,9 +174,9 @@ class RegisterView extends StatelessWidget {
                                       ),
                                     ));
                               }),
-                        const TextSpan(
+                        TextSpan(
                             text: ' \'ni Okudum ve Kabul Ediyorum.',
-                            style: TextStyle(color: Colors.black)),
+                            style: GoogleFonts.montserrat(color: Colors.black)),
                       ])),
                     ),
                   )

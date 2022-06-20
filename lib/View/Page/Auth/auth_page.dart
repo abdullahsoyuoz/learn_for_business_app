@@ -1,7 +1,8 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:learn_for_business_app/Controller/asset_constants.dart';
-import 'package:learn_for_business_app/Controller/utility.dart';
+import 'package:learn_for_business_app/Controller/extension.dart';
 import 'package:learn_for_business_app/View/Page/Auth/login_view.dart';
 import 'package:learn_for_business_app/View/Page/Auth/register_view.dart';
 import 'package:learn_for_business_app/View/Style/color.dart';
@@ -63,7 +64,7 @@ class AuthPage extends StatelessWidget {
                                     foregroundColor: MaterialStateProperty.all(
                                         AppColor.greenDark),
                                     textStyle: MaterialStateProperty.all(
-                                        const TextStyle(
+                                        GoogleFonts.montserrat(
                                             fontSize: 17,
                                             fontWeight: FontWeight.w600))),
                                 child: AnimatedCrossFade(
@@ -94,7 +95,7 @@ class AuthPage extends StatelessWidget {
                                     foregroundColor:
                                         MaterialStateProperty.all(Colors.black),
                                     textStyle: MaterialStateProperty.all(
-                                        const TextStyle(
+                                        GoogleFonts.montserrat(
                                             fontSize: 24,
                                             fontWeight: FontWeight.w600))),
                                 child: AnimatedCrossFade(

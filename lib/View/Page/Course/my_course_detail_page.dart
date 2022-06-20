@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key key}) : super(key: key);
+class MyCourseDetailPage extends StatelessWidget {
+  const MyCourseDetailPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       key: scaffoldKey,
       body: const SizedBox.expand(
-        child: Center(child: Text('HomePage')),
+        child: Center(child: Text('MyCourseDetailPage')),
       ),
     );
   }

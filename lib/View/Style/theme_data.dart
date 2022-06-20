@@ -7,8 +7,8 @@ ThemeData appTheme() => ThemeData.light().copyWith(
     textTheme:
         TextTheme(bodyText2: GoogleFonts.montserrat(color: Colors.black)),
     inputDecorationTheme: InputDecorationTheme(
-      hintStyle: TextStyle(color: AppColor.grey),
-      floatingLabelStyle: TextStyle(color: AppColor.grey),
+      hintStyle: GoogleFonts.montserrat(color: AppColor.grey),
+      floatingLabelStyle: GoogleFonts.montserrat(color: AppColor.grey),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10),
         borderSide: BorderSide(color: AppColor.greyLight, width: 2),
@@ -36,7 +36,7 @@ ThemeData appTheme() => ThemeData.light().copyWith(
         backgroundColor: MaterialStateProperty.all(AppColor.greenLight),
         overlayColor: MaterialStateProperty.all(AppColor.greenLight),
         textStyle: MaterialStateProperty.all(
-            const TextStyle(fontWeight: FontWeight.w500, fontSize: 15)),
+             GoogleFonts.montserrat(fontWeight: FontWeight.w500, fontSize: 15)),
       ),
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(
@@ -51,7 +51,7 @@ ThemeData appTheme() => ThemeData.light().copyWith(
       overlayColor: MaterialStateProperty.all(AppColor.greenLight),
       foregroundColor: MaterialStateProperty.all(AppColor.greenDark),
       textStyle: MaterialStateProperty.all(
-          const TextStyle(fontWeight: FontWeight.w500, fontSize: 15)),
+          GoogleFonts.montserrat(fontWeight: FontWeight.w500, fontSize: 15)),
     )),
     textButtonTheme: TextButtonThemeData(
         style: ButtonStyle(

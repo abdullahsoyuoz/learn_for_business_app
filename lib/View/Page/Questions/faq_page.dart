@@ -1,7 +1,8 @@
 import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:learn_for_business_app/Controller/utility.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:learn_for_business_app/Controller/extension.dart';
 import 'package:learn_for_business_app/View/Widget/customappbar.dart';
 
 class FrequentlyAskedQuestionPage extends StatelessWidget {
@@ -23,13 +24,13 @@ class FrequentlyAskedQuestionPage extends StatelessWidget {
                 width: context.width,
                 child: ColoredBox(
                   color: Colors.grey.shade200,
-                  child: const Align(
+                  child: Align(
                     alignment: Alignment.centerLeft,
                     child: Padding(
-                      padding: EdgeInsets.only(left: 20.0),
+                      padding: const EdgeInsets.only(left: 20.0),
                       child: Text(
                         'Başlıca Sorular',
-                        style: TextStyle(
+                        style: GoogleFonts.montserrat(
                             fontSize: 17, fontWeight: FontWeight.w600),
                       ),
                     ),
@@ -91,7 +92,7 @@ class FaqItemWidget extends StatelessWidget {
                     ],
                   ),
                   AnimatedCrossFade(
-                    alignment: Alignment.bottomCenter,
+                      alignment: Alignment.bottomCenter,
                       firstChild: Padding(
                         padding: const EdgeInsets.only(top: 10, bottom: 10),
                         child: Text(Faker()

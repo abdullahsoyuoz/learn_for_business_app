@@ -1,5 +1,6 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:learn_for_business_app/View/Page/Contact/View/contact_form_view.dart';
 import 'package:learn_for_business_app/View/Page/Contact/View/contact_info_view.dart';
 import 'package:learn_for_business_app/View/Style/color.dart';
@@ -28,7 +29,7 @@ class _ContactPageState extends State<ContactPage>
       child: FittedBox(
         child: Text(
           e,
-          style: const TextStyle(color: Colors.black),
+          style:  GoogleFonts.montserrat(color: Colors.black),
         ),
       ),
     );

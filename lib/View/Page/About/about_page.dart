@@ -1,5 +1,6 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:learn_for_business_app/View/Page/About/View/about_us_view.dart';
 import 'package:learn_for_business_app/View/Page/About/View/mission_view.dart';
 import 'package:learn_for_business_app/View/Page/About/View/staff_view.dart';
@@ -33,7 +34,7 @@ class _AboutPageState extends State<AboutPage>
         child: FittedBox(
           child: Text(
             e,
-            style: const TextStyle(color: Colors.black),
+            style: GoogleFonts.montserrat(color: Colors.black),
           ),
         ));
   }).toList();

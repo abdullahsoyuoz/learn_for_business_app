@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:learn_for_business_app/Controller/constant_texts.dart';
-import 'package:learn_for_business_app/Controller/utility.dart';
+import 'package:learn_for_business_app/Controller/extension.dart';
 import 'package:learn_for_business_app/View/Page/Auth/new_password_page.dart';
 import 'package:learn_for_business_app/View/Widget/customappbar.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
@@ -42,9 +43,9 @@ class _PhoneVerificationPageState extends State<PhoneVerificationPage> {
         padding:
             const EdgeInsets.only(top: 30, left: 20, right: 20, bottom: 120),
         children: [
-          const Text(
+          Text(
             'Doğrulama\nKodunu Gir',
-            style: TextStyle(fontSize: 26, fontWeight: FontWeight.w600),
+            style: GoogleFonts.montserrat(fontSize: 26, fontWeight: FontWeight.w600),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 20.0),
