@@ -1,8 +1,14 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:learn_for_business_app/Controller/constant_texts.dart';
+import 'package:learn_for_business_app/Controller/mainpage_indexer.dart';
 import 'package:learn_for_business_app/Model/dummy_course.dart';
 import 'package:learn_for_business_app/View/Style/color.dart';
+import 'package:learn_for_business_app/View/View/mainpageview.dart';
 import 'package:learn_for_business_app/View/Widget/customappbar.dart';
+import 'package:learn_for_business_app/View/Widget/dialog_widget.dart';
+import 'package:provider/provider.dart';
 
 class ExamPage extends StatelessWidget {
   const ExamPage({Key key}) : super(key: key);
@@ -36,7 +42,32 @@ class ExamPage extends StatelessWidget {
                   horizontal: 20,
                 ),
                 child: ElevatedButton(
-                    onPressed: () {}, child: const Text('Gönder')),
+                    onPressed: () {
+                      showDialog(
+                          context: context,
+                          builder: (context) {
+                            return CustomDialog(
+                              isTransparent: false,
+                              callback: () {
+                                Provider.of<MainPageIndexer>(context,
+                                        listen: false)
+                                    .setIndex(0)
+                                    .whenComplete(() {
+                                  Navigator.pushAndRemoveUntil(
+                                      context,
+                                      CupertinoPageRoute(
+                                        builder: (context) => MainPageView(),
+                                      ),
+                                      (route) => false).whenComplete(() {});
+                                });
+                              },
+                              title: 'Tebrikler',
+                              description: examfinishDescirpiton,
+                              buttonTitle: 'Anasayfaya Dön',
+                            );
+                          });
+                    },
+                    child: const Text('Gönder')),
               )
             ],
           ),

@@ -18,3 +18,15 @@ String ctVisionDescription =
 
 String ctstaffDesciprion =
     "Yeni kurulmuş bir firma olarak şu anda az sayıda olan kadromuzu yakın bir zaman içerisinde çeşitlendirerek arttıracağız.";
+
+String paymentDescr1 =
+    "Kredi kartı ödeme sistemi Türkiye’nin önde gelen ödeme sistemi olan iyzico tarafindan sağlanmaktadır. Kredi kartı bilgileriniz hiç bir şekilde saklanmamaktadir.";
+
+String paymentDescr2 =
+    "Ödeme işlemine devam ettiğiniz takdirde Mesafeli Satış Sözleşmesini kabul etmiş sayılırsınız.";
+
+String forgotPasswordDialogDesciprion =
+    'Yeni şifreniz başarıyla değiştirildi.\nTekrar giriş yapabilirsiniz.';
+
+String examfinishDescirpiton =
+    "Sınavınız başarıyla gönderildi.\nTekrar katılabilirsiniz.";

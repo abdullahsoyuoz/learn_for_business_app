@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_new
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -5,6 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:learn_for_business_app/Controller/constant_texts.dart';
 import 'package:learn_for_business_app/View/Page/Auth/auth_page.dart';
 import 'package:learn_for_business_app/View/Widget/customappbar.dart';
+import 'package:learn_for_business_app/View/Widget/dialog_widget.dart';
 
 class NewPasswordPage extends StatelessWidget {
   NewPasswordPage({Key key}) : super(key: key);
@@ -12,9 +15,9 @@ class NewPasswordPage extends StatelessWidget {
   final ValueNotifier<bool> obscurePassword = ValueNotifier(true);
   final ValueNotifier<bool> obscurePasswordVerification = ValueNotifier(true);
 
-  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _passwordController = new TextEditingController();
   final TextEditingController _passwordVerificationController =
-      TextEditingController();
+      new TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +35,8 @@ class NewPasswordPage extends StatelessWidget {
         children: [
           Text(
             'Yeni Parola\nOluştur',
-            style: GoogleFonts.montserrat(fontSize: 26, fontWeight: FontWeight.w600),
+            style: GoogleFonts.montserrat(
+                fontSize: 26, fontWeight: FontWeight.w600),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 20.0),
@@ -103,13 +107,35 @@ class NewPasswordPage extends StatelessWidget {
             padding: const EdgeInsets.only(top: 40),
             child: ElevatedButton(
                 onPressed: () {
-                  Navigator.pushAndRemoveUntil(
-                    context,
-                    CupertinoPageRoute(
-                      builder: (context) => AuthPage(),
-                    ),
-                    (route) => false,
-                  );
+                  // Navigator.pushAndRemoveUntil(
+                  //   context,
+                  //   CupertinoPageRoute(
+                  //     builder: (context) => AuthPage(),
+                  //   ),
+                  //   (route) => false,
+                  // );
+                  showDialog(
+                      context: context,
+                      builder: (context) {
+                        return CustomDialog(
+                          isTransparent: false,
+                          callback: () {
+                            Navigator.pushAndRemoveUntil(
+                                context,
+                                CupertinoPageRoute(
+                                  builder: (context) => AuthPage(),
+                                ),
+                                (route) => false).whenComplete(() {
+                                  // FIXME: dispose sikinti
+                              _passwordController.dispose();
+                              _passwordVerificationController.dispose();
+                            });
+                          },
+                          title: 'Tebrikler',
+                          description: forgotPasswordDialogDesciprion,
+                          buttonTitle: 'Giriş Ekranına Dön',
+                        );
+                      });
                 },
                 child: const Text('Parolamı Kaydet')),
           )

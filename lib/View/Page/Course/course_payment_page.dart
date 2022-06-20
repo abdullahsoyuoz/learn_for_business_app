@@ -1,9 +1,12 @@
 // ignore_for_file: unnecessary_new
 
 import 'package:animations/animations.dart';
+import 'package:easy_rich_text/easy_rich_text.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:learn_for_business_app/Controller/constant_texts.dart';
 import 'package:learn_for_business_app/Controller/extension.dart';
 import 'package:learn_for_business_app/Controller/input_formatters.dart';
 import 'package:learn_for_business_app/Model/Const/pricing.dart';
@@ -104,10 +107,13 @@ class _CoursePaymentPageState extends State<CoursePaymentPage> {
                                               style: GoogleFonts.montserrat(
                                                   color: Colors.black)),
                                         ),
-                                        e.fee == null ? const SizedBox() : Text('${e.fee} TL',
-                                            style: GoogleFonts.montserrat(
-                                                color: AppColor.greenDark,
-                                                fontWeight: FontWeight.bold)),
+                                        e.fee == null
+                                            ? const SizedBox()
+                                            : Text('${e.fee} TL',
+                                                style: GoogleFonts.montserrat(
+                                                    color: AppColor.greenDark,
+                                                    fontWeight:
+                                                        FontWeight.bold)),
                                       ],
                                     ));
                               }).toList(),
@@ -261,10 +267,14 @@ class _CoursePaymentPageState extends State<CoursePaymentPage> {
 class PaymentWithCreditView extends StatelessWidget {
   PaymentWithCreditView({Key key}) : super(key: key);
 
-  final TextEditingController _creditNameController = new TextEditingController();
-  final TextEditingController _creditNumberController = new TextEditingController();
-  final TextEditingController _creditExpiredDateController = new TextEditingController();
-  final TextEditingController _creditCVVController = new TextEditingController();
+  final TextEditingController _creditNameController =
+      new TextEditingController();
+  final TextEditingController _creditNumberController =
+      new TextEditingController();
+  final TextEditingController _creditExpiredDateController =
+      new TextEditingController();
+  final TextEditingController _creditCVVController =
+      new TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -300,9 +310,8 @@ class PaymentWithCreditView extends StatelessWidget {
                 style: GoogleFonts.montserrat(color: Colors.black),
                 inputFormatters: [formatterCreditCard],
                 decoration: const InputDecoration(
-                  label: Text('Kart Numarası'),
-                  hintText: '···· ···· ···· ····'
-                ),
+                    label: Text('Kart Numarası'),
+                    hintText: '···· ···· ···· ····'),
               ),
             ),
             Padding(
@@ -316,12 +325,12 @@ class PaymentWithCreditView extends StatelessWidget {
                       style: GoogleFonts.montserrat(color: Colors.black),
                       inputFormatters: [formatterExpiredDate],
                       decoration: const InputDecoration(
-                        label: Text('Ay / Yıl'),
-                        hintText: '·· / ··'
-                      ),
+                          label: Text('Ay / Yıl'), hintText: '·· / ··'),
                     ),
                   ),
-                  const SizedBox(width: 20,),
+                  const SizedBox(
+                    width: 20,
+                  ),
                   Expanded(
                     child: TextFormField(
                       controller: _creditCVVController,
@@ -329,17 +338,53 @@ class PaymentWithCreditView extends StatelessWidget {
                       style: GoogleFonts.montserrat(color: Colors.black),
                       inputFormatters: [formatterCVV],
                       decoration: const InputDecoration(
-                        label: Text('CVV'),
-                        hintText: '···'
-                      ),
+                          label: Text('CVV'), hintText: '···'),
                     ),
                   ),
                 ],
               ),
             ),
-            const Padding(padding: EdgeInsets.only(top: 20), child: Text('Kredi kartı ödeme sistemi Türkiye’nin önde gelen ödeme sistemi olan iyzico tarafindan sağlanmaktadır. Kredi kartı bilgileriniz hiç bir şekilde saklanmamaktadir.', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey),),),
-            const Padding(padding: EdgeInsets.only(top: 20), child: Text('Ödeme işlemine devam ettiğiniz takdirde Mesafeli Satış Sözleşmesini kabul etmiş sayılırsınız.', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey),),),
-            Padding(padding: const EdgeInsets.only(top: 20), child: ElevatedButton(onPressed: (){}, child: const Text('Ödeme Yap')),),
+            Padding(
+              padding: const EdgeInsets.only(top: 20),
+              child: EasyRichText(
+                paymentDescr1,
+                defaultStyle: const TextStyle(
+                    fontWeight: FontWeight.bold, color: Colors.grey),
+                patternList: [
+                  EasyRichTextPattern(
+                    targetString: 'iyzico',
+                    recognizer: TapGestureRecognizer()..onTap = (){
+                        // TODO: iyzico recognizer
+                      },
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, color: AppColor.greenDark),
+                  )
+                ],
+              ),
+            ),
+            Padding(
+                padding: const EdgeInsets.only(top: 20),
+                child: EasyRichText(
+                  paymentDescr2,
+                  defaultStyle: const TextStyle(
+                    fontWeight: FontWeight.bold, color: Colors.grey),
+                  patternList: [
+                    EasyRichTextPattern(
+                      recognizer: TapGestureRecognizer()..onTap = (){
+                        // TODO: mesafeli satış sözleşmesi recognizer
+                      },
+                      targetString: 'Mesafeli Satış Sözleşmesini',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold, color: AppColor.greenDark),
+
+                    )
+                  ],
+                )),
+            Padding(
+              padding: const EdgeInsets.only(top: 20),
+              child: ElevatedButton(
+                  onPressed: () {}, child: const Text('Ödeme Yap')),
+            ),
           ],
         ),
       ),

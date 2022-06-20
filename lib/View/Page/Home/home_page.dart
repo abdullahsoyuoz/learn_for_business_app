@@ -1,7 +1,6 @@
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:learn_for_business_app/Controller/asset_constants.dart';
 import 'package:learn_for_business_app/Controller/extension.dart';
 import 'package:learn_for_business_app/Model/dummy_course.dart';
 import 'package:learn_for_business_app/View/Style/color.dart';

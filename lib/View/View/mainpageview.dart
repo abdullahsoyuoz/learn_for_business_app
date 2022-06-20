@@ -20,7 +20,7 @@ class MainPageView extends StatelessWidget {
   MainPageView({Key key}) : super(key: key);
 
   final List<Widget> _views = [
-    HomePage(),
+    const HomePage(),
     CoursePage(),
     const PricingPage(),
     const ProfilePage(),
@@ -67,7 +67,7 @@ class MainPageView extends StatelessWidget {
     return Consumer<MainPageIndexer>(builder: (context, provider, _) {
       return BottomNavigationBar(
           currentIndex: provider.mainpageindex,
-          onTap: (index) => provider.setIndex = index,
+          onTap: (index) => provider.setIndex(index),
           type: BottomNavigationBarType.fixed,
           selectedLabelStyle:
                GoogleFonts.montserrat(fontSize: 15, fontWeight: FontWeight.w700),

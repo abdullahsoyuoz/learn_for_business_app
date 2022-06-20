@@ -43,7 +43,7 @@ Future<void> drawerItemRouteHelper(BuildContext context, int index) async {
       Future(() {
         zoomController.value.close.call();
       }).whenComplete(() {
-        Provider.of<MainPageIndexer>(context, listen: false).setIndex = 2;
+        Provider.of<MainPageIndexer>(context, listen: false).setIndex(2);
       });
       break;
     case 2:

@@ -41,7 +41,7 @@ class DrawerView extends StatelessWidget {
                                 onTap: () {
                                   Future(() {
                                     zoomController.value.close.call();
-                                  }).whenComplete(() => provider.setIndex = 0);
+                                  }).whenComplete(() => provider.setIndex(0));
                                 },
                                 child: SizedBox(
                                   width: context.width,
@@ -61,7 +61,7 @@ class DrawerView extends StatelessWidget {
                                     Future(() {
                                       zoomController.value.close.call();
                                     }).whenComplete(
-                                        () => provider.setIndex = 3);
+                                        () => provider.setIndex(3));
                                   },
                                   child: Padding(
                                     padding: const EdgeInsets.only(left: 5.0),
