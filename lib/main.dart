@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:learn_for_business_app/Controller/mainpage_indexer.dart';
 import 'package:learn_for_business_app/Model/dummy_course.dart';
 import 'package:learn_for_business_app/View/Page/Auth/auth_page.dart';

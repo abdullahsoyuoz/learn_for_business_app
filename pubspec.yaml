@@ -29,7 +29,6 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   animations: ^2.0.3
-  appinio_video_player: ^1.1.1
   carousel_pro: ^1.0.0
   cupertino_icons: ^1.0.2
   easy_rich_text: ^1.0.4
@@ -46,6 +45,7 @@ dependencies:
   provider: ^6.0.3
   smooth_page_indicator: ^1.0.0+2
   smooth_star_rating: ^1.1.1
+  video_player: ^2.4.5
 
 dev_dependencies:
   flutter_lints: ^2.0.0

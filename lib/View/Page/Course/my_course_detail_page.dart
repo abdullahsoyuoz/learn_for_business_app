@@ -113,7 +113,7 @@ class _MyCourseDetailPageState extends State<MyCourseDetailPage> {
                                 Expanded(
                                     child: Text(
                                   content,
-                                  style: const TextStyle(
+                                  style: GoogleFonts.montserrat(
                                       fontSize: 17,
                                       fontWeight: FontWeight.bold),
                                 )),

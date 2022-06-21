@@ -220,7 +220,7 @@ class _CoursePaymentPageState extends State<CoursePaymentPage> {
                         Tab(
                           child: Text(
                             'Kart ile Ödeme',
-                            style: TextStyle(
+                            style: GoogleFonts.montserrat(
                                 color: selectedPaymentMethod == 0
                                     ? Colors.black
                                     : Colors.grey,
@@ -230,7 +230,7 @@ class _CoursePaymentPageState extends State<CoursePaymentPage> {
                         Tab(
                           child: Text(
                             'Iyzico ile Ödeme',
-                            style: TextStyle(
+                            style: GoogleFonts.montserrat(
                                 color: selectedPaymentMethod == 1
                                     ? Colors.black
                                     : Colors.grey,
@@ -348,7 +348,7 @@ class PaymentWithCreditView extends StatelessWidget {
               padding: const EdgeInsets.only(top: 20),
               child: EasyRichText(
                 paymentDescr1,
-                defaultStyle: const TextStyle(
+                defaultStyle: GoogleFonts.montserrat(
                     fontWeight: FontWeight.bold, color: Colors.grey),
                 patternList: [
                   EasyRichTextPattern(
@@ -356,7 +356,7 @@ class PaymentWithCreditView extends StatelessWidget {
                     recognizer: TapGestureRecognizer()..onTap = (){
                         // TODO: iyzico recognizer
                       },
-                    style: TextStyle(
+                    style: GoogleFonts.montserrat(
                         fontWeight: FontWeight.bold, color: AppColor.greenDark),
                   )
                 ],
@@ -366,7 +366,7 @@ class PaymentWithCreditView extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 20),
                 child: EasyRichText(
                   paymentDescr2,
-                  defaultStyle: const TextStyle(
+                  defaultStyle: GoogleFonts.montserrat(
                     fontWeight: FontWeight.bold, color: Colors.grey),
                   patternList: [
                     EasyRichTextPattern(
@@ -374,7 +374,7 @@ class PaymentWithCreditView extends StatelessWidget {
                         // TODO: mesafeli satış sözleşmesi recognizer
                       },
                       targetString: 'Mesafeli Satış Sözleşmesini',
-                      style: TextStyle(
+                      style: GoogleFonts.montserrat(
                         fontWeight: FontWeight.bold, color: AppColor.greenDark),
 
                     )

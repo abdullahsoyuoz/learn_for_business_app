@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_final_fields, unnecessary_new
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
