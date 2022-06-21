@@ -17,17 +17,15 @@ class PhoneVerificationPage extends StatefulWidget {
 
 class _PhoneVerificationPageState extends State<PhoneVerificationPage> {
   GlobalKey scaffoldKey = GlobalKey<ScaffoldState>();
-   TextEditingController _pincodeController;
+   TextEditingController _pincodeController = new TextEditingController();
 
   @override
   void initState() {
-    _pincodeController = TextEditingController();
     super.initState();
   }
 
   @override
   void dispose() {
-    _pincodeController.dispose();
     super.dispose();
   }
 

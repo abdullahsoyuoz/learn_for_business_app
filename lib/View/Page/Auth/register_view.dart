@@ -159,7 +159,7 @@ class RegisterView extends StatelessWidget {
                       child: RichText(
                           text: TextSpan(children: [
                         TextSpan(
-                            text: 'Privacy policy and terms',
+                            text: 'Gizlilik Politikası ve Şartlar',
                             style: GoogleFonts.montserrat(
                                 color: Colors.blueAccent),
                             recognizer: TapGestureRecognizer()
@@ -175,7 +175,7 @@ class RegisterView extends StatelessWidget {
                                     ));
                               }),
                         TextSpan(
-                            text: ' \'ni Okudum ve Kabul Ediyorum.',
+                            text: ' \'ı Okudum ve Kabul Ediyorum.',
                             style: GoogleFonts.montserrat(color: Colors.black)),
                       ])),
                     ),

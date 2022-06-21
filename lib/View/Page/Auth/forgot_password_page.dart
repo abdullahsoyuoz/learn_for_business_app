@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:learn_for_business_app/Controller/asset_constants.dart';
 import 'package:learn_for_business_app/Controller/constant_texts.dart';
 import 'package:learn_for_business_app/Controller/input_formatters.dart';
 import 'package:learn_for_business_app/View/Page/Auth/phone_verification_page.dart';
@@ -26,7 +27,8 @@ class ForgotPasswordPage extends StatelessWidget {
         children: [
           Text(
             'Şifremi\nUnuttum',
-            style: GoogleFonts.montserrat(fontSize: 26, fontWeight: FontWeight.w600),
+            style: GoogleFonts.montserrat(
+                fontSize: 26, fontWeight: FontWeight.w600),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 20.0),
@@ -38,11 +40,28 @@ class ForgotPasswordPage extends StatelessWidget {
               controller: _phoneController,
               inputFormatters: [formatterPhoneWithCode],
               style: GoogleFonts.montserrat(color: Colors.black),
-              decoration: const InputDecoration(
-                  label: Text('Telefon Numarası'),
-                  hintText: '+90 ··· ··· ·· ··'),
+              decoration: InputDecoration(
+                label: const Text('Telefon Numarası'),
+                hintText: '+90 ··· ··· ·· ··',
+                prefixIcon: Padding(
+                  padding: const EdgeInsets.only(right: 8.0, left: 16),
+                  child: Image.asset(AppConstants.phone, width: 30),
+                ),
+                prefixIconConstraints: const BoxConstraints(maxWidth: 46, minWidth: 46),
+              ),
             ),
           ),
+          // Padding(
+          //   padding: const EdgeInsets.only(top: 40.0),
+          //   child: TextFormField(
+          //     controller: _phoneController,
+          //     inputFormatters: [formatterPhoneWithCode],
+          //     style: GoogleFonts.montserrat(color: Colors.black),
+          //     decoration: const InputDecoration(
+          //         label: Text('Telefon Numarası'),
+          //         hintText: '+90 ··· ··· ·· ··'),
+          //   ),
+          // ),
           Padding(
             padding: const EdgeInsets.only(top: 40),
             child: ElevatedButton(

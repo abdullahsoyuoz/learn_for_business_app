@@ -41,6 +41,8 @@ class AuthPage extends StatelessWidget {
                               AppConstants.loginBack,
                               width: context.width,
                               fit: BoxFit.fitWidth,
+                              color: AppColor.greenLight.withOpacity(0.5),
+                              colorBlendMode: BlendMode.srcATop,
                             ),
                           ),
                           Center(

@@ -36,7 +36,7 @@ ThemeData appTheme() => ThemeData.light().copyWith(
         backgroundColor: MaterialStateProperty.all(AppColor.greenLight),
         overlayColor: MaterialStateProperty.all(AppColor.greenLight),
         textStyle: MaterialStateProperty.all(
-             GoogleFonts.montserrat(fontWeight: FontWeight.w500, fontSize: 15)),
+             GoogleFonts.montserrat(fontWeight: FontWeight.w700, fontSize: 15)),
       ),
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(
