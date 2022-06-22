@@ -31,7 +31,8 @@ class DrawerView extends StatelessWidget {
                       fit: StackFit.expand,
                       children: [
                         SingleChildScrollView(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          padding: const EdgeInsets.only(
+                              left: 20, right: 20, bottom: 120),
                           physics: const AlwaysScrollableScrollPhysics(
                               parent: BouncingScrollPhysics()),
                           child: Column(
@@ -54,39 +55,43 @@ class DrawerView extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              !value ? const SizedBox() : Padding(
-                                padding: const EdgeInsets.only(top: 10.0),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    Future(() {
-                                      zoomController.value.close.call();
-                                    }).whenComplete(
-                                        () => provider.setIndex(3));
-                                  },
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(left: 5.0),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          'Merhaba',
-                                          style: GoogleFonts.montserrat(
-                                              color: Colors.grey.shade600,
-                                              fontSize: 14),
+                              !value
+                                  ? const SizedBox()
+                                  : Padding(
+                                      padding: const EdgeInsets.only(top: 10.0),
+                                      child: GestureDetector(
+                                        onTap: () {
+                                          Future(() {
+                                            zoomController.value.close.call();
+                                          }).whenComplete(
+                                              () => provider.setIndex(3));
+                                        },
+                                        child: Padding(
+                                          padding:
+                                              const EdgeInsets.only(left: 5.0),
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                'Merhaba',
+                                                style: GoogleFonts.montserrat(
+                                                    color: Colors.grey.shade600,
+                                                    fontSize: 14),
+                                              ),
+                                              Text(
+                                                user.name,
+                                                style: GoogleFonts.montserrat(
+                                                    color: Colors.black,
+                                                    fontSize: 16,
+                                                    fontWeight:
+                                                        FontWeight.w900),
+                                              ),
+                                            ],
+                                          ),
                                         ),
-                                        Text(
-                                          user.name,
-                                          style:  GoogleFonts.montserrat(
-                                              color: Colors.black,
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.w900),
-                                        ),
-                                      ],
+                                      ),
                                     ),
-                                  ),
-                                ),
-                              ),
                               ListView.builder(
                                 shrinkWrap: true,
                                 physics: const NeverScrollableScrollPhysics(),
@@ -103,8 +108,8 @@ class DrawerView extends StatelessWidget {
                         Align(
                           alignment: Alignment.bottomCenter,
                           child: Padding(
-                            padding:
-                                const EdgeInsets.symmetric(horizontal: 20.0),
+                            padding: const EdgeInsets.only(
+                                left: 20.0, right: 20, bottom: 20),
                             child: value
                                 ? OutlinedButton(
                                     onPressed: () {
@@ -176,7 +181,7 @@ class DrawerItemWidget extends StatelessWidget {
               children: [
                 Text(
                   data.title,
-                  style:  GoogleFonts.montserrat(fontSize: 16),
+                  style: GoogleFonts.montserrat(fontSize: 16),
                 ),
                 const FaIcon(
                   FontAwesomeIcons.chevronRight,

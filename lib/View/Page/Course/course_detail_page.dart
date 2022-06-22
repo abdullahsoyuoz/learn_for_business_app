@@ -342,11 +342,11 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
               elevation: 10,
               margin: const EdgeInsets.symmetric(horizontal: 20),
               child: Padding(
-                padding: EdgeInsets.only(
+                padding: const EdgeInsets.only(
                   left: 20.0,
                   right: 20.0,
                   top: 20,
-                  bottom: context.paddingBottom,
+                  bottom: 20,
                 ),
                 child: AnimatedCrossFade(
                   duration: const Duration(milliseconds: 300),

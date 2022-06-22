@@ -126,7 +126,6 @@ class NewPasswordPage extends StatelessWidget {
                                   builder: (context) => AuthPage(),
                                 ),
                                 (route) => false).whenComplete(() {
-                                  // FIXME: dispose sikinti
                               _passwordController.dispose();
                               _passwordVerificationController.dispose();
                             });
